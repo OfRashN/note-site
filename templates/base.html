@@ -1,0 +1,55 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static '/css/style.css' %}"/>
+    <link rel="stylesheet"
+        href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+        crossorigin="anonymous">
+    <title>Заметки онлайн</title>
+</head>
+
+
+<body>
+    <header class="header">
+        <div class="container-xl">
+            <div class="header__profile">
+                {% if user.is_anonymous %}
+                    <a href="{% url 'django_registration_register'%}">
+
+                {% else %}
+                    <a href="{% url 'profile'%}">
+
+                {% endif %}
+                    <img class="header__profile__img" src="{% static 'note_system/profile.svg' %}" alt="картинка профиля">
+                </a>
+                <div class="header__profile__name">{{ user.username|default:'Anonymous' }}</div>
+            </div>
+
+            <div class="header__controls">
+                {% if user.is_anonymous %}
+                    <a href="{% url 'index'%}" class="header__controls__main">Главная</a>
+                    <a href="{% url 'login'%}" class="header__controls__main">Вход</a>
+                    <a href="{% url 'django_registration_register'%}" class="header__controls__main">Регистрация</a>
+                {% else %}
+                    <a href="{% url 'index'%}" class="header__controls__main">Главная</a>
+                    <a href="{% url 'create_note'%}" class="header__controls__create-note">Создать заметку</a>
+                    <a href="{% url 'public'%}" class="header__controls__public-note">Публичные заметки</a>
+                    <a href="{% url 'my_notes' %}" class="header__controls__my-note">Мои заметки</a>
+                    <a href="{% url 'logout' %}" class="header__controls__exit">Выйти</a>
+                {% endif %}
+            </div>
+        </div>
+    </header>
+
+
+{% block search %}{% endblock %}
+
+{% block main %} {% endblock %}
+</body>
+</html>

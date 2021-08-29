@@ -1,0 +1,22 @@
+{% extends 'base.html' %}
+
+{% load static %}
+
+{% block extra_css %}
+    <link rel="stylesheet" href="{% static '/css/style.css' %}" />
+{% endblock %}
+
+
+{% block main %}
+    {% block form_create %}
+        <div class="main__note">
+            <div class="container-xl">
+                <form method="post" class="create-form">
+                    {% csrf_token %}
+                        {{ form.as_p}}
+                    <button type="submit" class="create-form__save-button btn-primary">Создать</button>
+                </form>
+            </div>
+        </div>
+    {% endblock %}
+{% endblock %}

@@ -1,0 +1,29 @@
+{% extends 'base.html' %}
+
+{% load static %}
+
+{% block extra_css %}
+    <link rel="stylesheet" href="{% static '/css/style.css' %}" />
+{% endblock %}
+
+{% block search %}{% endblock %}
+{% block main %}
+    <div class="main">
+        <!-- заметка  -->
+        {% for section in notes %}
+            {% url 'note' section.id as link %}
+            {% include 'note_system/note_sections/note_section.html' with theme=section.theme username=section.username text=section.text created_at=section.created_at modified_at=section.modified_at %}
+        {% endfor %}
+
+
+        <div class="container-xl">
+            <div class="main__empty-note-1">
+            </div>
+        </div>
+
+        <div class="container-xl">
+            <div class="main__empty-note-2">
+            </div>
+        </div>
+    </div>
+{% endblock %}

@@ -1,0 +1,15 @@
+{% extends 'base.html' %}
+
+{% load static %}
+
+ {% block main %}
+    <div class="main__note">
+        <div class="container-xl">
+            <form method="post">
+                {% csrf_token %}
+                    {{ form.as_p }}
+                <button type="submit" class="login-form__exit-button btn-primary">Войти</button>
+            </form>
+        </div>
+    </div>
+{% endblock %}

@@ -1,0 +1,18 @@
+
+        <div class="container-xl">
+            <div class="main__card-1">
+               <div class="main__card__top">
+                   <div class="main__card__top__text">
+                        <p>{{ theme|default:'Без названия'|truncatechars:30 }}</p>
+                        <p>{{ username }}</p>
+                    </div>
+                </div>
+                <p class="main__card__text">{{ text|linebreaksbr|truncatechars:115 }}</p>
+                <a href={{ link }}><button type="button" class="main__card__button btn-primary">Открыть</button></a>
+
+                 <div class="main__card__bottom">
+                    <p>{{ created_at }}</p>
+                    <p>{{ modified_at }}</p>
+                </div>
+            </div>
+        </div>

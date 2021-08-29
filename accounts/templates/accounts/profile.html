@@ -1,0 +1,14 @@
+{% extends 'base.html' %}
+
+{% load static %}
+ {% block main %}
+    <div class="main__note">
+        <div class="container-xl">
+            <form method="post">
+                {% csrf_token %}
+                    {{ form.as_p }}
+                <button type="submit">Сохранить</button>
+            </form>
+        </div>
+    </div>
+{% endblock %}

@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/in_note.css">
+    <link rel="stylesheet"
+        href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+        crossorigin="anonymous">
+    <title>Главная</title>
+</head>
+
+
+<body>
+    <header class="header">
+        <div class="container-xl">
+            <div >
+                <a href="profile.html" class="header__profile">
+                    <img class="header__profile__img" src="/images/profile.png" alt="картинка профиля">
+                    <span class="header__profile__name">Anonymous</span>
+                </a>
+            </div>
+
+            <div class="header__controls">
+                <a href="index.html" class="header__controls__main">Главная</a>
+                <a href="create_note.html" class="header__controls__create-note">Создать заметку</a>
+                <a href="public_note.html" class="header__controls__public-note">Публичные заметки</a>
+                <a href="my_note.html" class="header__controls__my-note">Мои заметки</a>
+                <a href="" class="header__controls__exit">Выйти</a>
+            </div>
+        </div>
+    </header>
+
+
+    <div class="main">
+
+        <!-- заметка  -->
+        <div class="container-xl">
+            <div class="main__card-1">
+               <div class="main__card__top">
+                   <div class="main__card__top__text">
+                        <p>theame</p>
+                        <p>username</p>
+                    </div>
+                </div>
+                <p class="main__card__text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Rem fugiat quisquam architecto deserunt et doloribus eveniet praesentium tenetur dicta enim dolores perferendis vitae, at veniam! Ipsum delectus, odio ab nostrum maxime accusamus quibusdam, esse inventore nulla rerum amet dolorum iusto! Deserunt dolore quae dolorem magni impedit assumenda praesentium esse corrupti aliquam eum ratione, maxime vero veniam dolores, voluptatum ipsa repudiandae eos. Fugiat dolores quisquam ad ipsum aliquam alias minus adipisci officiis tempora esse neque placeat ducimus blanditiis impedit ipsam vel, amet rerum consequatur facere minima. Nihil, itaque accusantium voluptatum dicta perferendis, voluptatibus, illum quam eaque assumenda dolore impedit eius fuga.</p>
+                <div class="main__card__bottom">
+                    <p>created</p>
+                    <p>modified</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="main__buttons">
+            <a href=""><button type="button" class="main__change__button btn btn-danger">Изменить</button></a>
+            <a href=""><button type="button" class="main__delete__button btn btn-secondary">Удалить</button></a>
+        </div>
+
+    </div>
+</body>
+</html>
