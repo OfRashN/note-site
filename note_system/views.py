@@ -85,14 +85,14 @@ class SearchNoteView(ListView):
         else:
             pass
 
-        paginator = Paginator(notes, settings.POSTS_PER_PAGE)
-        notes = paginator.get_page(page)
+        # paginator = Paginator(notes, settings.POSTS_PER_PAGE)
+        # notes = paginator.get_page(page)
 
         context.update({
             'notes' : notes,
             'search': search,
             'page': page,
-            'paginator': paginator,
+            # 'paginator': paginator,
         })
         return context
 
