@@ -1,0 +1,7 @@
+django
+python-dotenv
+psycopg2-binary
+django-registration
+django-crispy-forms
+gunicorn  # heroku
+django-heroku  #  heroku
