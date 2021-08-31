@@ -28,7 +28,7 @@
         <!-- заметка  -->
         {% for section in notes %}
             {% url 'note' section.id as link %}
-            {% include 'note_system/note_sections/note_section.html' with theme=section.theme username=section.username text=section.text created_at=section.created_at modified_at=section.modified_at %}
+            {% include 'note_system/note_section.html' with theme=section.theme username=section.username text=section.text created_at=section.created_at modified_at=section.modified_at %}
         {% endfor %}
 
 

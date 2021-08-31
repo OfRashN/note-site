@@ -21,14 +21,14 @@ def index_view(request):
     context = {
         'notes': Note.objects.filter(Q(username=username) | Q(is_public=True)).order_by('-created_at'),
     }
-    return render(request, "note_system/note_pages/index.html", context=context)
+    return render(request, "note_system/index.html", context=context)
 
 
 def public_view(request):
     context = {
         'notes': Note.objects.order_by('-created_at').filter(is_public=True),
     }
-    return render(request, "note_system/note_pages/public_notes.html", context=context)
+    return render(request, "note_system/public_notes.html", context=context)
 
 
 def my_notes_view(request):
@@ -36,7 +36,7 @@ def my_notes_view(request):
     context = {
         'notes': Note.objects.filter(username=username)
     }
-    return render(request, "note_system/note_pages/my_notes.html", context=context)
+    return render(request, "note_system/my_notes.html", context=context)
 
 
 # заметка
@@ -48,7 +48,7 @@ def note_view(request, note_id):
     }
 
 
-    return render(request, 'note_system/note_pages/note.html', context=context)
+    return render(request, 'note_system/note.html', context=context)
 
 
 

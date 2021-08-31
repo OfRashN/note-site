@@ -8,6 +8,6 @@
 
 {% block main %}
     {% for note in notes %}
-        {% include 'note_system/note_sections/in_note_section.html' with username=note.username theme=note.theme text=note.text created_at=note.created_at modified_at=note.modified_at %}
+        {% include 'note_system/in_note_section.html' with username=note.username theme=note.theme text=note.text created_at=note.created_at modified_at=note.modified_at %}
     {% endfor %}
 {% endblock %}

@@ -5,7 +5,7 @@ from accounts.forms import RegisterForm
 from accounts.views import ProfileView
 
 urlpatterns = [
-    path('login/', LoginView.as_view(template_name='C:/Users/Akhme/notes-site-foxford/accounts/templates/accounts/registration/login.html'), name = 'login'),
+    path('login/', LoginView.as_view(template_name='accounts/registration/login.html'), name = 'login'),
     path('profile/', ProfileView.as_view(), name='profile'),
     path(
         'register/',
