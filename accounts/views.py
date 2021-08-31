@@ -1,7 +1,7 @@
 from django.shortcuts import redirect
 from django.urls import reverse_lazy
 from django.views.generic import CreateView, UpdateView
-from accounts.forms import RegisterForm, ProfileForm, LoginForm
+from accounts.forms import RegisterForm, ProfileForm
 
 
 
@@ -14,7 +14,7 @@ class RegistrationView(CreateView):
 class ProfileView(UpdateView):
     form_class = ProfileForm
     success_url = reverse_lazy('profile')
-    template_name = 'app/accounts/profile.html'
+    template_name = 'accounts/profile.html'
 
 
     def get(self, request, *args, **kwargs):
