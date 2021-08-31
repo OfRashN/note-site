@@ -5,8 +5,6 @@ import django_heroku
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 from django.urls import reverse_lazy
 
-os.environ['DATABASE_URL'] = 'postgres://khyrwamxiyacnd:f06d9ee3221906a142adf7f15609da294035d04a70a6d62b50af755197de263f@ec2-52-19-170-215.eu-west-1.compute.amazonaws.com:5432/das3hjuokch7o5'
-
 BASE_DIR = Path(__file__).resolve().parent.parent
 
 
